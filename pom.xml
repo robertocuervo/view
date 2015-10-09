@@ -1,16 +1,45 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
 		<groupId>ch.netstal.roberto.osgi.parent</groupId>
 		<artifactId>MavenParent</artifactId>
 		<version>1.0.0</version>
-		<relativePath>../MavenParent/pom.xml</relativePath>
+		<relativePath>../</relativePath>
 	</parent>
 
 	<groupId>ch.netstal.roberto.osgi.view</groupId>
 	<artifactId>view</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>eclipse-plugin</packaging>
+
+	<scm>
+		<connection>scm:git:git@github.com:robertocuervo/view.git</connection>
+		<url>https://github.com/robertocuervo/view</url>
+	</scm>
+	<repositories>
+		<repository>
+			<id>tychoTimer</id>
+			<url>http://localhost:8081/nexus/content/repositories/tychoTimer</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+	
+	<distributionManagement>
+		<repository>
+			<id>tychoTimer</id>
+			<url>http://localhost:8081/nexus/content/repositories/tychoTimer</url>
+		</repository>
+		<snapshotRepository>
+			<id>tychoTimer-snapshots</id>
+			<url>http://localhost:8081/nexus/content/repositories/tychoTimer-snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+
 </project>
